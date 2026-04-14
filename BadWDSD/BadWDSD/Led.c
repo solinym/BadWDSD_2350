@@ -71,7 +71,7 @@ void Led_Init()
 #if LED_IS_WS2812
 #define LED_ON() ws2812_put_rgb(LED_RGB[0], LED_RGB[1], LED_RGB[2])
 #define LED_OFF() ws2812_put_rgb(0, 0, 0)
-#elif PICO_TYPE == PICO_TYPE_E_PICO_W
+#elif (PICO_TYPE == PICO_TYPE_E_PICO_W) || (PICO_TYPE == PICO_TYPE_E_PICO_2_W)
 #define LED_ON() cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1)
 #define LED_OFF() cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0)
 #elif !LED_IS_NOT_GPIO
