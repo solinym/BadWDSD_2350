@@ -1,6 +1,6 @@
 # BadWDSD
 
-This is a hardware modchip for **Sony PlayStation 3**. By using **Raspberry Pi Pico (RP2040)**, It is possible for non-CFW compatible models to boot **qCFW**.
+This is a hardware modchip for **Sony PlayStation 3**. By using **Raspberry Pi Pico (RP2040) or Pico 2 (RP2350)**, It is possible for non-CFW compatible models to boot **qCFW**.
 
 # Supported models
 
@@ -85,7 +85,7 @@ If you flashed bad **Stagex.bin** or **CoreOS.bin**, see **Recover from bad Stag
 
 # Installation (Hardware)
 
-Currently, **Raspberry Pi Pico (RP2040)** and **RP2040-Zero** are supported.
+Currently, **Raspberry Pi Pico (RP2040), RP2040-Zero, and Pico 2/Pico 2 W (RP2350)** are supported.
 
 **Only install modchip after Stagex is installed to console flash from above section. Otherwise it won't boot, if you already installed the modchip, You can use HOLD pin to temporary disable the modchip without unsoldering it.**
 
