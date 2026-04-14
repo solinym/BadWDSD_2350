@@ -1,5 +1,7 @@
 # BadWDSD
 
+**I am NOT the original developer, however I have added support for RP2350. (Pico 2 and Pico 2 W). The only differences are the compilation scripts and LED behavior.**
+
 This is a hardware modchip for **Sony PlayStation 3**. By using **Raspberry Pi Pico (RP2040) or Pico 2 (RP2350)**, It is possible for non-CFW compatible models to boot **qCFW**.
 
 # Supported models
