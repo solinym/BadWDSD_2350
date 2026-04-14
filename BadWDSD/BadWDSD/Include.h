@@ -3,6 +3,8 @@
 #define PICO_TYPE_E_PICO 1
 #define PICO_TYPE_E_PICO_W 2
 #define PICO_TYPE_E_RP2040_ZERO 3
+#define PICO_TYPE_E_PICO_2 4
+#define PICO_TYPE_E_PICO_2_W 5
 
 // generated at build
 #include "build/Config.h"
@@ -26,7 +28,7 @@
 #include "pico/rand.h"
 #include "pico/mutex.h"
 
-#if PICO_TYPE == PICO_TYPE_E_PICO_W
+#if (PICO_TYPE == PICO_TYPE_E_PICO_W) || (PICO_TYPE == PICO_TYPE_E_PICO_2_W)
 #include "pico/cyw43_arch.h"
 #endif
 
@@ -50,9 +52,9 @@ extern void Hold_Init();
 #define LED_WS2812_PIO pio0
 static const uint32_t LED_PIN_ID = 16;
 static const uint8_t LED_RGB[3] = {0, 0, 30};
-#elif PICO_TYPE == PICO_TYPE_E_PICO
+#elif (PICO_TYPE == PICO_TYPE_E_PICO) || (PICO_TYPE == PICO_TYPE_E_PICO_2)
 static const uint32_t LED_PIN_ID = PICO_DEFAULT_LED_PIN;
-#elif PICO_TYPE == PICO_TYPE_E_PICO_W
+#elif (PICO_TYPE == PICO_TYPE_E_PICO_W) || (PICO_TYPE == PICO_TYPE_E_PICO_2_W)
 #define LED_IS_NOT_GPIO 1
 #else
 #error bad!!!
