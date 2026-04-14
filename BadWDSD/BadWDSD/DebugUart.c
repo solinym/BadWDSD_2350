@@ -80,6 +80,10 @@ void DebugUart_Init()
     PrintLog("Pico\n");
 #elif PICO_TYPE == PICO_TYPE_E_PICO_W
     PrintLog("Pico W\n");
+#elif PICO_TYPE == PICO_TYPE_E_PICO_2
+    PrintLog("Pico 2\n");
+#elif PICO_TYPE == PICO_TYPE_E_PICO_2_W
+    PrintLog("Pico 2 W\n");
 #elif PICO_TYPE == PICO_TYPE_E_RP2040_ZERO
     PrintLog("RP2040-Zero\n");
 #else
